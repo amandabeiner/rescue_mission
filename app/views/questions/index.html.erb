@@ -1,0 +1,13 @@
+<%= flash[:notice] %>
+
+<ul>
+
+  <% @questions.each do |question| %>
+    <li>
+      <%= link_to(question.title, question_path(question)) %>
+    </li>
+    <p><%= question.details %></p>
+  <% end %>
+
+
+<ul>

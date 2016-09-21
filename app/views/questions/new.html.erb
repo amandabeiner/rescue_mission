@@ -1,0 +1,8 @@
+<%= flash[:error] %>
+<%= form_for @question do |f| %>
+  <%= f.label :title, "Title" %><br />
+  <%= f.text_field :title %>
+  <%= f.label :details, "Details" %><br />
+  <%= f.text_area :details %>
+  <%= f.submit "Submit Question" %>
+<% end %>

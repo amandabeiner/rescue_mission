@@ -1,0 +1,13 @@
+<%= flash[:success] %>
+<%= flash[:error] %>
+
+<h1>Edit Question</h1>
+<%= form_for @question do |f| %>
+  <%= f.label :title, "Title" %><br />
+  <%= f.text_field :title, placeholder: @question.title %>
+  <%= f.label :details, "Details" %><br />
+  <%= f.text_area :details, placeholder: @question.details %>
+  <%= f.submit "Submit Question" %>
+<% end %>
+
+<%=link_to("Delete Question", question_path(@question), method: :delete) %>

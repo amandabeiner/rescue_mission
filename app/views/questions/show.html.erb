@@ -1,0 +1,23 @@
+<%= flash[:success] %>
+<%= flash[:error] %>
+
+<h1> <%= @question.title %> </h1>
+<p> <%= @question.details %> </p>
+
+<%= form_for [@question, @answer] do |f| %>
+  <%= f.label :description, "Description" %><br />
+  <%= f.text_field :description %>
+  <%= f.submit "Answer Question" %>
+<% end %>
+
+<%= link_to("Edit Question", edit_question_path(@question)) %>
+<%=link_to("Delete Question", question_path(@question), method: :delete) %>
+
+<h2>Answers:</h2>
+
+<ul>
+<% @question.answers.each do |answer| %>
+  <li><%= answer.description %>
+  <% end %>
+
+</ul>
