@@ -1,24 +1,13 @@
-# README
+# Rescue Mission
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Rails app, completed as part of Launch Academy's core curriculum, to practice full-stack Rails, ActiveRecord associations, nested routing, HTTP requests, and MVC architecture in Rails.
 
-Things you may want to cover:
+## Set Up
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To get set up, run the following:
+```no-highlight
+  bundle
+  rake db:create
+  rake db:migrate
+  rails s
+```
